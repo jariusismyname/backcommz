@@ -12,8 +12,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const JWT_SECRET = process.env.JWT_SECRET || "your_super_secret_key";
-const mongoURI = "mongodb+srv://jarius:connectedisme1234@cluster0.axzmifl.mongodb.net/ecommerce?retryWrites=true&w=majority";
+const JWT_SECRET = process.env.JWT_SECRET  ;
+const mongoURI = process.env.MONGODB_URI
 
 // 1. DATABASE CONNECTION
 mongoose.connect(mongoURI)
